@@ -65,3 +65,17 @@ String getGreet(DateTime now) {
     return "Good Night!";
   }
 }
+
+List<String> getNameWithNumners(int n) {
+  List<String> names = [];
+  for (int i = 0; i < n; i++) {
+    names.add("Name $i");
+  }
+  return names;
+}
+
+Future<DateTime> changeDateToTommorow(int i, DateTime nowTime) async {
+  DateTime now = nowTime;
+  var newDate = DateTime(now.year, now.month, now.day + i);
+  return newDate;
+}

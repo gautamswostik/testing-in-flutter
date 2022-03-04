@@ -36,6 +36,29 @@ void main() {
           expect(greet, 'Good Afternoon!');
         },
       );
+      test(
+        'Should return N names',
+        () {
+          
+          List<String> names = getNameWithNumners(300);
+          List<String> genNames = List.generate(300, (i) => "Name $i", growable: false);
+          expect(names, genNames);
+          // for (int i = 0; i < 300; i++) {
+          //   genNames.add("Name $i");
+          // }
+
+          // expect(names, genNames);
+        },
+      );
+
+      test(
+        'Should return tommorows date',
+        () async {
+          DateTime date = await changeDateToTommorow(1, DateTime.now());
+          var expectedDate = DateTime(2022, 03, 05);
+          expect(date, expectedDate);
+        },
+      );
     },
   );
 }
