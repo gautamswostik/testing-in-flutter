@@ -1,3 +1,5 @@
+import 'package:testing/ola.dart';
+
 class Counter {
   int value = 0;
 
@@ -67,5 +69,20 @@ class Counter {
     } else {
       return "Good Night!";
     }
+  }
+
+  ReturningCLass returnDetail() {
+    const ola =  ReturningCLass(
+      name: 'ossy',
+      surName: 'osborn',
+      age: 68,
+    );
+    //! THis can be done by making Class items non final
+    // final ola = ReturningCLass()
+    //   ..name = "Ola"
+    //   ..surName = "Nordmann"
+    //   ..age = 25;
+
+    return ola;
   }
 }

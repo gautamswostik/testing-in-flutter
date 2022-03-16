@@ -1,5 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:testing/counter.dart';
+import 'package:testing/ola.dart';
 
 void main() {
   group('Counter', () {
@@ -34,6 +35,18 @@ void main() {
 
       String month = counter.getMonthName(6);
       expect(month, 'June');
+    });
+
+    test('Should retrun ossy osborn', () {
+      final counter = Counter();
+
+      ReturningCLass ret = counter.returnDetail();
+      ReturningCLass exp = const ReturningCLass(
+        name: 'ossy',
+        surName: 'osborn',
+        age: 68,
+      );
+      expect(ret, exp);
     });
   });
 }

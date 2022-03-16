@@ -29,7 +29,7 @@ void main() {
         },
       );
 
-      test(
+          test(
         'Should return Good Afternoon!',
         () {
           String greet = getGreet(DateTime.now());
@@ -55,7 +55,7 @@ void main() {
         'Should return tommorows date',
         () async {
           DateTime date = await changeDateToTommorow(1, DateTime.now());
-          var expectedDate = DateTime(2022, 03, 05);
+          var expectedDate = DateTime(2022, 03, 15);
           expect(date, expectedDate);
         },
       );
